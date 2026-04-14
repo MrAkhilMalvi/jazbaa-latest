@@ -6,22 +6,23 @@
 
 ## Verified Commands
 
-**Frontend** (run from `src/frontend/`):
+**Frontend** (run from `frontend/`):
 
-- **install**: `pnpm install --prefer-offline`
-- **typecheck**: `pnpm typecheck`
-- **lint fix**: `pnpm fix`
-- **build**: `pnpm build`
+- **install**: `npm install`
+- **dev**: `npm run dev`
+- **typecheck**: `npm run typecheck`
+- **lint fix**: `npm run fix`
+- **build**: `npm run build`
 
-**Backend** (run from `src/backend/`):
+**Backend** (run from `backend/`):
 
-- **install**: `mops install`
-- **typecheck**: `mops check --fix`
-- **build**: `mops build`
+- **install**: `npm install`
+- **dev**: `npm run dev`
+- **start**: `npm start`
 
-**Backend and frontend integration** (run from root):
+**Backend and frontend integration**
 
-- **generate bindings**: `pnpm bindgen` This step is necessary to ensure the frontend can call the backend methods.
+- The frontend now uses a standard React setup in `frontend/`, and the backend is an Express app in `backend/`.
 
 ## Learnings
 
