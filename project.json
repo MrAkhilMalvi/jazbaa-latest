@@ -1,0 +1,28 @@
+{
+  "overview": "JAZBAA is a premium Awwwards-level platform connecting people with their creative passions — dance, music, art, fitness, tech, and more. It features a light, cinematic UI with immersive GSAP animations, smooth scroll, and 3D interactions across 5 fully-animated pages.",
+  "features": [
+    "Premium light UI with cinematic typography and Apple-level spacing",
+    "GSAP + ScrollTrigger animations including text reveal, parallax, and stagger effects",
+    "Smooth Lenis scroll with inertia",
+    "Interactive 3D tilt cards for 8 passion categories",
+    "Custom Cuberto-style cursor with magnetic buttons",
+    "Glass morphism navbar with scroll-triggered blur",
+    "Horizontal Apple-style scroll gallery for events",
+    "SVG stroke draw animations for icons and connecting lines",
+    "Animated counters and community testimonial carousel",
+    "5 fully-animated pages: Home, About, Join, Events, Landing"
+  ],
+  "category": "showcase",
+  "tags": [
+    "premium",
+    "animation",
+    "gsap",
+    "creative",
+    "community",
+    "awwwards",
+    "light-ui",
+    "3d",
+    "scroll-effects"
+  ],
+  "last_updated": "2026-04-13T11:58:39.977Z"
+}
