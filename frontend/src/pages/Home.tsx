@@ -33,7 +33,7 @@ const PASSIONS: PassionCard[] = [
     tagline: "Move with freedom",
     members: "2.4k members",
     image:
-      "https://images.unsplash.com/photo-1606788075761-4f1b81e1e32e?w=600&q=80",
+      "https://images.unsplash.com/photo-1583391733956-6c77a3c6aef2?w=1200&q=90&auto=format&fit=crop",
     accent: "oklch(0.52 0.22 270)",
   },
   {
@@ -41,7 +41,7 @@ const PASSIONS: PassionCard[] = [
     tagline: "Find your frequency",
     members: "1.8k members",
     image:
-      "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=600&q=80",
+      "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200&q=90&auto=format&fit=crop",
     accent: "oklch(0.48 0.24 285)",
   },
   {
@@ -49,7 +49,7 @@ const PASSIONS: PassionCard[] = [
     tagline: "Lines that tell stories",
     members: "1.2k members",
     image:
-      "https://images.unsplash.com/photo-1617802690658-1173a812650d?w=600&q=80",
+      "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=1200&q=90&auto=format&fit=crop",
     accent: "oklch(0.70 0.16 55)",
   },
   {
@@ -57,7 +57,7 @@ const PASSIONS: PassionCard[] = [
     tagline: "Color your world",
     members: "980 members",
     image:
-      "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&q=80",
+      "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=1200&q=90&auto=format&fit=crop",
     accent: "oklch(0.68 0.18 35)",
   },
   {
@@ -65,7 +65,7 @@ const PASSIONS: PassionCard[] = [
     tagline: "Capture the moment",
     members: "3.1k members",
     image:
-      "https://images.unsplash.com/photo-1559181567-c3190bab3a7c?w=600&q=80",
+      "https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=1200&q=90&auto=format&fit=crop",
     accent: "oklch(0.62 0.14 195)",
   },
   {
@@ -73,7 +73,7 @@ const PASSIONS: PassionCard[] = [
     tagline: "Build strength, build you",
     members: "4.2k members",
     image:
-      "https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=600&q=80",
+      "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?w=1200&q=90&auto=format&fit=crop",
     accent: "oklch(0.65 0.16 160)",
   },
   {
@@ -81,7 +81,7 @@ const PASSIONS: PassionCard[] = [
     tagline: "Build what's next",
     members: "2.9k members",
     image:
-      "https://images.unsplash.com/photo-1609743522653-52354461eb27?w=600&q=80",
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=90&auto=format&fit=crop",
     accent: "oklch(0.55 0.18 240)",
   },
   {
@@ -89,7 +89,7 @@ const PASSIONS: PassionCard[] = [
     tagline: "Art you can taste",
     members: "1.6k members",
     image:
-      "https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?w=600&q=80",
+      "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=1200&q=90&auto=format&fit=crop",
     accent: "oklch(0.72 0.16 45)",
   },
 ];
@@ -102,7 +102,7 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       "JAZBAA changed how I think about dance. I found my people — the energy, the real friendships. Nothing else comes close.",
     avatar:
-      "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80",
+      "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=300&q=90&auto=format&fit=crop",
   },
   {
     name: "Rahul Verma",
@@ -111,7 +111,7 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       "Met incredible musicians I never would have found otherwise. Joining JAZBAA was the best decision I made this year.",
     avatar:
-      "https://images.unsplash.com/photo-1566753323558-f4e0952af115?w=100&q=80",
+      "https://images.unsplash.com/photo-1566753323558-f4e0952af115?w=300&q=90&auto=format&fit=crop",
   },
   {
     name: "Sara Khan",
@@ -120,7 +120,7 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       "Weekly meetups keep me inspired and growing. The feedback from this community is honest, warm, and incredibly valuable.",
     avatar:
-      "https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?w=100&q=80",
+      "https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?w=300&q=90&auto=format&fit=crop",
   },
   {
     name: "Dev Mehta",
@@ -129,10 +129,9 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       "The accountability here is unmatched. I've hit goals I never thought possible — it's not just a group, it's a movement.",
     avatar:
-      "https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=100&q=80",
+      "https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=300&q=90&auto=format&fit=crop",
   },
 ];
-
 const BENEFITS = [
   {
     num: "01",
@@ -577,12 +576,12 @@ function WhatIsJazbaaSection() {
               className="relative overflow-hidden rounded-2xl"
               style={{ aspectRatio: "4/5" }}
             >
-              <img
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80"
-                alt="JAZBAA community — people together"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
+<img
+  src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?w=1200&q=90&auto=format&fit=crop"
+  alt="Indian community — people together"
+  className="w-full h-full object-cover"
+  loading="lazy"
+/>
               <div
                 className="absolute bottom-0 left-0 right-0 h-1/3"
                 style={{

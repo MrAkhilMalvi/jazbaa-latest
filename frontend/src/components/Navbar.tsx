@@ -44,7 +44,11 @@ export default function Navbar() {
   useEffect(() => {
     const menu = mobileMenuRef.current;
     if (!menu || !menuOpen) return;
-    gsap.fromTo(menu, { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "power2.out" });
+    gsap.fromTo(
+      menu,
+      { opacity: 0 },
+      { opacity: 1, duration: 0.25, ease: "power2.out" },
+    );
     gsap.fromTo(
       menu.querySelectorAll("a, button"),
       { opacity: 0, y: 12 },
@@ -61,7 +65,10 @@ export default function Navbar() {
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
-      if (userMenuRef.current && !userMenuRef.current.contains(e.target as Node)) {
+      if (
+        userMenuRef.current &&
+        !userMenuRef.current.contains(e.target as Node)
+      ) {
         setUserMenuOpen(false);
       }
     };
@@ -74,9 +81,7 @@ export default function Navbar() {
     setUserMenuOpen(false);
   }, [pathname]);
 
-  const userLabel = user
-    ? user.name || user.email.split("@")[0]
-    : "Member";
+  const userLabel = user ? user.name || user.email.split("@")[0] : "Member";
 
   return (
     <>
@@ -99,17 +104,28 @@ export default function Navbar() {
               aria-label="JAZBAA Home"
               data-cursor="pointer"
             >
-              <div
-                className="w-8 h-8 rounded-lg flex items-center justify-center transition-smooth"
-                style={{ backgroundColor: "var(--color-accent)" }}
-              >
-                <span className="text-white font-display font-bold text-xs tracking-wider">
-                  J
-                </span>
-              </div>
+              <img
+                src="/assets/images/jazbaa-logo.png"
+                alt="JAZBAA Logo"
+                className={`h-12 md:h-24 w-auto object-contain transition-all duration-300 ${
+                  scrolled ? "brightness-100" : "brightness-0 invert"
+                }`}
+              />
+
               <span
-                className="font-display font-bold text-lg tracking-tight"
-                style={{ color: "var(--color-text-primary)" }}
+                className={`font-display font-black text-2xl md:text-3xl uppercase transition-all duration-500 ${
+                  scrolled
+                    ? "bg-gradient-to-br from-gray-900 via-gray-800 to-gray-500 bg-clip-text text-transparent"
+                    : "text-white"
+                }`}
+                style={{
+                  letterSpacing: "0.15em",
+                  textShadow: scrolled
+                    ? "none"
+                    : "0 4px 24px rgba(255, 255, 255, 0.45)",
+                  transform: scrolled ? "scale(0.95)" : "scale(1)",
+                  transformOrigin: "left center",
+                }}
               >
                 JAZBAA
               </span>
@@ -206,7 +222,10 @@ export default function Navbar() {
                   <Link
                     to="/join"
                     className="btn-primary"
-                    style={{ padding: "0.625rem 1.25rem", fontSize: "0.8125rem" }}
+                    style={{
+                      padding: "0.625rem 1.25rem",
+                      fontSize: "0.8125rem",
+                    }}
                     data-ocid="nav-cta-join"
                     data-cursor="pointer"
                   >

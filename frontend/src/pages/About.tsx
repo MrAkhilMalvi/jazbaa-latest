@@ -26,30 +26,51 @@ function WireframeGlobe() {
 
   return (
     <group>
-      <mesh ref={meshRef}>
-        <icosahedronGeometry args={[1.6, 4]} />
-        <meshBasicMaterial
-          color={new THREE.Color("oklch(0.52 0.22 270)")}
+      {/* 1. Inner Solid Core - Gives the earth a dense center */}
+      <mesh>
+        <sphereGeometry args={[1.4, 32, 32]} />
+        <meshStandardMaterial
+          color="#ff5500"
+          emissive="#ff2a00"
+          emissiveIntensity={0.8}
           transparent
-          opacity={0.04}
-          wireframe={false}
+          opacity={0.85}
         />
       </mesh>
+
+      {/* 2. Geometric Glassy Layer */}
+      <mesh ref={meshRef}>
+        <icosahedronGeometry args={[1.6, 4]} />
+        <meshPhysicalMaterial
+          color="#ff7a18"
+          transparent
+          opacity={0.15}
+          roughness={0.2}
+          transmission={0.5} // Creates a glass-like effect
+          thickness={1}
+        />
+      </mesh>
+
+      {/* 3. Glowing Wireframe Edges */}
       <lineSegments ref={edgesRef}>
         <edgesGeometry args={[new THREE.IcosahedronGeometry(1.6, 4)]} />
         <lineBasicMaterial
-          color={new THREE.Color("oklch(0.52 0.22 270)")}
+          color="#ffcc88"
           transparent
-          opacity={0.55}
+          opacity={0.6}
+          blending={THREE.AdditiveBlending}
         />
       </lineSegments>
+
+      {/* 4. Outer Atmosphere Glow */}
       <mesh>
-        <sphereGeometry args={[1.75, 32, 32]} />
+        <sphereGeometry args={[1.9, 32, 32]} />
         <meshBasicMaterial
-          color={new THREE.Color("oklch(0.52 0.22 270)")}
+          color="#ff7a18"
           transparent
-          opacity={0.03}
+          opacity={0.12}
           side={THREE.BackSide}
+          blending={THREE.AdditiveBlending} // This makes the outer edge look like a soft glow
         />
       </mesh>
     </group>
@@ -470,31 +491,27 @@ export default function About() {
 
             <div
               ref={globeRef}
-              className="relative flex items-center justify-center rounded-2xl overflow-hidden"
+              className="relative flex items-center justify-center"
               style={{
                 height: "420px",
-                background: "oklch(0.975 0.004 260)",
-                border: "1px solid oklch(0.91 0.008 260)",
+                background: "transparent",
+                border: "none",
               }}
             >
-              <div
-                className="absolute inset-0 rounded-full m-auto"
-                style={{
-                  width: "320px",
-                  height: "320px",
-                  background:
-                    "radial-gradient(circle, oklch(0.52 0.22 270 / 0.06) 0%, transparent 70%)",
-                }}
-              />
               <Canvas
                 camera={{ position: [0, 0, 4], fov: 45 }}
                 style={{ width: "100%", height: "100%" }}
-                gl={{ antialias: true, alpha: true }}
+                gl={{ antialias: true, alpha: true }} // alpha: true automatically makes background transparent
               >
-                <ambientLight intensity={0.5} />
+
+                
+                {/* Added lights to enhance the inner core color and make it pop */}
+                <ambientLight intensity={1.5} />
+                <directionalLight position={[2, 5, 2]} intensity={2} />
+                
                 <WireframeGlobe />
               </Canvas>
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center">
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center pointer-events-none">
                 <span className="section-label text-[10px]">Global Vision</span>
               </div>
             </div>
