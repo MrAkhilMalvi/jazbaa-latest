@@ -59,9 +59,9 @@ const eventsRoute = createRoute({
   path: "/events",
   component: () => (
     <Suspense fallback={<PageLoader />}>
-      <RequireAuth>
+      {/* <RequireAuth> */}
         <Events />
-      </RequireAuth>
+      {/* </RequireAuth> */}
     </Suspense>
   ),
 });
