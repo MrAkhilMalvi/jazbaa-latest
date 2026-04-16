@@ -576,12 +576,12 @@ function WhatIsJazbaaSection() {
               className="relative overflow-hidden rounded-2xl"
               style={{ aspectRatio: "4/5" }}
             >
-<img
-  src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?w=1200&q=90&auto=format&fit=crop"
-  alt="Indian community — people together"
-  className="w-full h-full object-cover"
-  loading="lazy"
-/>
+              <img
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80"
+                alt="JAZBAA community — people together"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
               <div
                 className="absolute bottom-0 left-0 right-0 h-1/3"
                 style={{
